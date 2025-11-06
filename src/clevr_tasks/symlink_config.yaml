@@ -3,22 +3,22 @@
 
 ##### Paths for CLEVR-held-out #####
 # path to held_out_CLEVR/hdf5_held_out_CLEVR_ims/ download location
-clevr_ho_img_features_path: '/mike/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR/hdf5_held_out_CLEVR_ims'
+clevr_ho_img_features_path: '/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR/hdf5_held_out_CLEVR_ims'
 # path to held_out_CLEVR/hdf5_held_out_CLEVR/ download location
-clevr_ho_ques_path: '/mike/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR/hdf5_held_out_CLEVR'
+clevr_ho_ques_path: '/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR/hdf5_held_out_CLEVR'
 
 ##### Paths for CLEVR-held-out additional #####
 # Our 23 new HO's that extend CLEVR-HO
 # path to held_out_CLEVR_add/hdf5_held_out_CLEVR_ims/ download location
-clevr_ho_add_img_features_path: '/mike/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR_add/hdf5_held_out_CLEVR_ims'
+clevr_ho_add_img_features_path: '/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR_add/hdf5_held_out_CLEVR_ims'
 # path to held_out_CLEVR_add/hdf5_held_out_CLEVR/ download location
-clevr_ho_add_ques_path: '/mike/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR_add/hdf5_held_out_CLEVR'
+clevr_ho_add_ques_path: '/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/held_out_CLEVR_add/hdf5_held_out_CLEVR'
 
 ##### Paths for CLEVR-ATOM-HO-exists #####
 # Questions directory
 # path to hdf5_atom_ho_exist_CLEVR_val_v1.0/
-clevr_atom_ho_exists_ques_path: '/mike/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/hdf5_atom_ho_exist_CLEVR_val_v1.0'
+clevr_atom_ho_exists_ques_path: '/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/hdf5_atom_ho_exist_CLEVR_val_v1.0'
 # Images path is taken from CLEVR-ATOM
 # path to hdf5_atom_CLEVR_val_v1.0/val_v1.0_img_dir/
-clevr_atom_v1_img_features_path: '/mike/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/hdf5_atom_CLEVR_val_v1.0/val_v1.0_img_dir'
+clevr_atom_v1_img_features_path: '/mnt/c/Users/usEr/Downloads/CLEVR-HOPE-FRCNN/CLEVR-HOPE_FRCNN/hdf5_atom_CLEVR_val_v1.0/val_v1.0_img_dir'
 
