@@ -72,6 +72,8 @@ def main(args):
     questions = []
     for q_file, shift in zip(args.input_questions_json, q_family_shifts):
         print(q_file)
+        full_path = os.path.abspath(q_file)
+        print("Loading:", full_path)   # <-- now prints the full path
         with open(q_file, "r") as f:
             more_questions = json.load(f)["questions"]
             for q in more_questions:
