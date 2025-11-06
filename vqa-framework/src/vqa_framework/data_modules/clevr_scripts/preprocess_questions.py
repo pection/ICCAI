@@ -59,7 +59,8 @@ def main(args):
     if (args.input_vocab_json == "") and (args.output_vocab_json == ""):
         print("Must give one of --input_vocab_json or --output_vocab_json")
         return
-
+    for k,v in vars(args).items():
+        print(f"{k}:{v}")
     print("Loading data from", args.input_questions_json)
     if args.q_family_shift and len(args.q_family_shift):
         if len(args.q_family_shift) != len(args.input_questions_json):
