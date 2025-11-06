@@ -1,0 +1,3853 @@
+{
+  "info": {
+    "split": "train",
+    "license": "Creative Commons Attribution (CC BY 4.0)",
+    "version": "1.0",
+    "date": "2/14/2017"
+  },
+  "questions": [
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "count",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "count",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "function": "greater_than",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 0,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 2,
+      "split": "train",
+      "answer": "yes",
+      "question": "Are there more big green things than large purple shiny cubes?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 1,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 43,
+      "split": "train",
+      "answer": "2",
+      "question": "How many other things are there of the same shape as the tiny cyan matte object?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9,
+            10
+          ],
+          "function": "equal_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 2,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 10,
+      "split": "train",
+      "answer": "no",
+      "question": "Is the color of the large sphere the same as the large matte cube?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            5,
+            10
+          ],
+          "function": "intersect",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 3,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 34,
+      "split": "train",
+      "answer": "rubber",
+      "question": "What material is the big object that is right of the brown cylinder and left of the large brown sphere?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "query_size",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 4,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 89,
+      "split": "train",
+      "answer": "large",
+      "question": "How big is the brown shiny sphere?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            14
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 5,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 25,
+      "split": "train",
+      "answer": "0",
+      "question": "How many gray matte things are on the right side of the small rubber cube behind the large brown thing left of the cyan thing?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 6,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 83,
+      "split": "train",
+      "answer": "sphere",
+      "question": "What is the shape of the brown thing to the right of the large brown metallic thing that is on the left side of the brown sphere?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "query_size",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 7,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 61,
+      "split": "train",
+      "answer": "large",
+      "question": "The brown object that is the same shape as the green shiny thing is what size?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 8,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 36,
+      "split": "train",
+      "answer": "yes",
+      "question": "Are there any other things that have the same size as the brown shiny sphere?"
+    },
+    {
+      "image_index": 0,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 9,
+      "image_filename": "CLEVR_train_000000.png",
+      "question_family_index": 75,
+      "split": "train",
+      "answer": "gray",
+      "question": "What color is the tiny matte block left of the blue block?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 10,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 48,
+      "split": "train",
+      "answer": "0",
+      "question": "How many gray rubber cubes are the same size as the yellow block?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 11,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 57,
+      "split": "train",
+      "answer": "cube",
+      "question": "There is a rubber thing that is the same color as the cylinder; what shape is it?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 12,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 47,
+      "split": "train",
+      "answer": "yes",
+      "question": "Are there any tiny green rubber things that have the same shape as the large blue matte thing?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 13,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 52,
+      "split": "train",
+      "answer": "blue",
+      "question": "The matte ball that is the same size as the gray rubber object is what color?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 14,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 81,
+      "split": "train",
+      "answer": "brown",
+      "question": "There is a small matte block that is on the left side of the large rubber thing that is left of the gray ball; what is its color?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8,
+            14
+          ],
+          "function": "equal_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 15,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 16,
+      "split": "train",
+      "answer": "no",
+      "question": "There is a small metallic thing in front of the gray metallic thing; does it have the same color as the big rubber sphere?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            14
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 16,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 28,
+      "split": "train",
+      "answer": "sphere",
+      "question": "There is a gray object that is in front of the rubber cube behind the metallic ball behind the small brown thing; what shape is it?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 17,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 78,
+      "split": "train",
+      "answer": "0",
+      "question": "What number of red spheres are behind the shiny object that is on the left side of the tiny matte cylinder?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4,
+            9
+          ],
+          "function": "equal_material",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 18,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 11,
+      "split": "train",
+      "answer": "no",
+      "question": "Is the small gray object made of the same material as the big cube?"
+    },
+    {
+      "image_index": 1,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            14
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            15
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 19,
+      "image_filename": "CLEVR_train_000001.png",
+      "question_family_index": 25,
+      "split": "train",
+      "answer": "1",
+      "question": "There is a yellow thing behind the small metal object right of the gray metal sphere; what number of tiny matte cylinders are in front of it?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "function": "equal_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 20,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 17,
+      "split": "train",
+      "answer": "no",
+      "question": "There is a small object; is it the same color as the object in front of the gray shiny thing?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            5,
+            11
+          ],
+          "function": "intersect",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 21,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 33,
+      "split": "train",
+      "answer": "yellow",
+      "question": "There is a thing that is both to the right of the big rubber cube and left of the small gray ball; what color is it?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 22,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 72,
+      "split": "train",
+      "answer": "0",
+      "question": "There is a small gray metal ball; how many gray balls are on the right side of it?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            4,
+            11
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 23,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 71,
+      "split": "train",
+      "answer": "1",
+      "question": "What number of things are large yellow metallic balls or metallic things that are in front of the gray metallic sphere?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 24,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 79,
+      "split": "train",
+      "answer": "no",
+      "question": "There is a metal object in front of the gray metal object; are there any big blue rubber blocks in front of it?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 25,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 75,
+      "split": "train",
+      "answer": "gray",
+      "question": "What color is the metallic thing behind the big metal object?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "count",
+          "value_inputs": []
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "count",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8,
+            14
+          ],
+          "function": "equal_integer",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 26,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 3,
+      "split": "train",
+      "answer": "yes",
+      "question": "Are there the same number of blue rubber cubes on the left side of the large blue thing and tiny green matte cylinders?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            5,
+            10
+          ],
+          "function": "intersect",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 27,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 35,
+      "split": "train",
+      "answer": "cube",
+      "question": "What is the shape of the object that is both behind the large metallic thing and left of the gray metallic sphere?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 28,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 62,
+      "split": "train",
+      "answer": "gray",
+      "question": "The other object that is the same shape as the large metal thing is what color?"
+    },
+    {
+      "image_index": 2,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 29,
+      "image_filename": "CLEVR_train_000002.png",
+      "question_family_index": 37,
+      "split": "train",
+      "answer": "no",
+      "question": "Are there any other things of the same color as the big rubber block?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 30,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 76,
+      "split": "train",
+      "answer": "rubber",
+      "question": "What material is the tiny cube that is to the right of the blue thing?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 31,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 51,
+      "split": "train",
+      "answer": "0",
+      "question": "What number of purple objects are the same shape as the gray thing?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "function": "query_material",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 32,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 82,
+      "split": "train",
+      "answer": "rubber",
+      "question": "What is the material of the small thing to the left of the small purple block in front of the small cyan rubber cube?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 33,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 46,
+      "split": "train",
+      "answer": "no",
+      "question": "Are there any large cyan spheres made of the same material as the large green sphere?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 34,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 86,
+      "split": "train",
+      "answer": "cube",
+      "question": "What is the shape of the tiny cyan matte thing?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 35,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 84,
+      "split": "train",
+      "answer": "0",
+      "question": "How many brown shiny objects are there?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 36,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 81,
+      "split": "train",
+      "answer": "purple",
+      "question": "There is a small cube on the right side of the tiny blue thing that is behind the tiny cyan matte thing; what is its color?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "query_color",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 37,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 52,
+      "split": "train",
+      "answer": "blue",
+      "question": "There is a metallic block that is the same size as the cyan rubber cube; what color is it?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 38,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 85,
+      "split": "train",
+      "answer": "no",
+      "question": "Are any tiny purple rubber balls visible?"
+    },
+    {
+      "image_index": 3,
+      "program": [
+        {
+          "inputs": [],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "function": "query_shape",
+          "value_inputs": []
+        }
+      ],
+      "question_index": 39,
+      "image_filename": "CLEVR_train_000003.png",
+      "question_family_index": 77,
+      "split": "train",
+      "answer": "cylinder",
+      "question": "There is a cyan metal thing behind the cyan metal ball; what shape is it?"
+    }
+  ]
+}

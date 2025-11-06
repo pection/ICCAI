@@ -1,0 +1,80 @@
+{
+  "info": {
+    "split": "test",
+    "license": "Creative Commons Attribution (CC BY 4.0)",
+    "version": "1.0",
+    "date": "2/14/2017"
+  },
+  "questions": [
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 0,
+      "question": "Is there a thing that is the same shape as the small brown matte object?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 1,
+      "question": "How many brown rubber objects are the same shape as the gray rubber object?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 2,
+      "question": "Is the tiny brown object the same material as the tiny thing that is in front of the tiny blue thing?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 3,
+      "question": "How many tiny red rubber balls are there?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 4,
+      "question": "What size is the rubber object that is to the right of the rubber cylinder?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 5,
+      "question": "What number of other brown things have the same size as the shiny object?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 6,
+      "question": "What is the material of the object that is both to the left of the small blue thing and to the right of the small brown cylinder?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 7,
+      "question": "What material is the brown object that is the same size as the blue shiny block?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 8,
+      "question": "What is the size of the rubber thing that is in front of the small matte thing on the left side of the matte thing in front of the small blue metal object?"
+    },
+    {
+      "image_index": 0,
+      "split": "test",
+      "image_filename": "CLEVR_test_000000.png",
+      "question_index": 9,
+      "question": "What size is the brown cylinder that is the same material as the sphere?"
+    }
+  ]
+}

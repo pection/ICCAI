@@ -1,0 +1,6655 @@
+{
+  "info": {
+    "split": "closure",
+    "license": "Creative Commons Attribution (CC BY 4.0)",
+    "version": "1.0",
+    "date": "31/01/20"
+  },
+  "questions": [
+    {
+      "split": "val",
+      "image_filename": "train_000009.png",
+      "image_index": 9,
+      "image": "train_000009",
+      "question": "How many things are large blue balls or brown things that are the same material as the big blue sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            2
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 84
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000009.png",
+      "image_index": 9,
+      "image": "train_000009",
+      "question": "How many things are either tiny cyan cylinders or large cubes that are the same color as the rubber ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 85
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000009.png",
+      "image_index": 9,
+      "image": "train_000009",
+      "question": "How many things are either cyan cylinders or big blue metallic objects that are the same shape as the blue shiny thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            10
+          ],
+          "_output": [
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 86
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000009.png",
+      "image_index": 9,
+      "image": "train_000009",
+      "question": "How many things are either blocks or cyan matte cylinders that are the same size as the yellow shiny object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            1,
+            9
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 87
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "How many things are gray things or large brown spheres that are the same material as the small yellow ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            8
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0,
+            2,
+            4,
+            5,
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1,
+            4,
+            8
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            1,
+            10
+          ],
+          "_output": [
+            1,
+            8
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 88
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "How many things are either brown metal cylinders or large objects that are the same color as the large matte sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            3,
+            6,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3,
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            6
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            1,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            1,
+            6
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 89
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "How many things are yellow objects or green rubber objects that are the same shape as the red thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            1,
+            7
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 90
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "How many things are either large red balls or cylinders that are the same size as the brown rubber cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3,
+            6,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            3,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3,
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            3,
+            8
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            8
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            8
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 91
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "How many things are either tiny red rubber spheres or things that are the same material as the gray block?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            1,
+            5
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4,
+            9
+          ],
+          "_output": [
+            0,
+            1,
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 92
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "How many things are rubber objects or big metal blocks that are the same color as the large sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            1,
+            9
+          ],
+          "_output": [
+            2,
+            3,
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 93
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "How many things are either purple cylinders or metallic objects that are the same shape as the tiny matte object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            3,
+            5
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            3,
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            8
+          ],
+          "_output": [
+            0,
+            3,
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 94
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "How many things are tiny brown cubes or metallic objects that are the same size as the blue thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 5,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            8
+          ],
+          "_output": [
+            0,
+            3,
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 95
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "How many things are gray matte balls or big things that are the same material as the large gray cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            3,
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 96
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "How many things are either small cyan metallic things or big rubber balls that are the same color as the small rubber ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1,
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            5
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            12
+          ],
+          "_output": [
+            0
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 97
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "How many things are blue matte cubes or tiny objects that are the same shape as the large gray metal object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            3,
+            5
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            0
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 98
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "How many things are either big cyan rubber things or yellow matte objects that are the same size as the gray matte object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            3,
+            5,
+            6
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 99
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "How many things are small metal objects or small yellow things that are the same material as the ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            8
+          ],
+          "_output": [
+            6
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 100
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "How many things are either small yellow things or small metal balls that are the same color as the small ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            10
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 101
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "How many things are either small purple rubber things or tiny matte objects that are the same shape as the tiny purple object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            1,
+            2,
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 102
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "How many things are large brown balls or matte cylinders that are the same size as the cyan shiny object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            1,
+            2,
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            1,
+            2,
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 103
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "How many things are gray cubes or objects that are the same material as the gray block?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2,
+            7
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 104
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "How many things are matte objects or metal things that are the same color as the large metal thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0,
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            1,
+            7
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 105
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "How many things are either cyan matte cylinders or matte things that are the same shape as the small purple object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 106
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "How many things are either large gray objects or cyan cylinders that are the same size as the cyan metal thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            9
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 107
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "How many things are either big purple metal objects or tiny red blocks that are the same material as the large yellow sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            2,
+            3,
+            5,
+            8
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            2,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            12
+          ],
+          "_output": [
+            1
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 108
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "How many things are large red rubber cylinders or matte things that are the same color as the small shiny ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2,
+            4,
+            7,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            4,
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            4,
+            11
+          ],
+          "_output": [
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 109
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "How many things are either tiny red shiny things or metallic objects that are the same shape as the purple rubber object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            4,
+            7,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 5,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1,
+            6,
+            7
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "_output": [
+            1,
+            4,
+            7
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 110
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "How many things are either gray matte cylinders or red objects that are the same size as the purple matte ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 5,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            6
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 111
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "How many things are purple matte things or blocks that are the same material as the tiny purple thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            8
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 112
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "How many things are either large metallic blocks or small objects that are the same color as the big rubber object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 113
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "How many things are either tiny cyan spheres or matte objects that are the same shape as the big purple thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "_output": [
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 114
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "How many things are either tiny gray objects or rubber spheres that are the same size as the gray matte thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            9
+          ],
+          "_output": [
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 115
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "How many things are big red spheres or tiny objects that are the same material as the big block?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            4,
+            5,
+            7
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            4,
+            5,
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            9
+          ],
+          "_output": [
+            4,
+            5,
+            7
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 116
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "How many things are purple metal blocks or matte balls that are the same color as the big rubber block?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            7
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            0,
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            0,
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            11
+          ],
+          "_output": [
+            0,
+            3,
+            7
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 117
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "How many things are cyan cubes or tiny objects that are the same shape as the yellow metallic object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2,
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            8
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 118
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "How many things are blue rubber blocks or rubber things that are the same size as the yellow metal block?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            4,
+            5,
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            4,
+            5,
+            7
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 3,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "3",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 119
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "How many things are large purple matte cylinders or cylinders that are the same material as the cyan cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            4,
+            10
+          ],
+          "_output": [
+            3
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 120
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "How many things are rubber blocks or metallic cylinders that are the same color as the metal cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2,
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            2,
+            9
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": 2,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "2",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 121
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "How many things are either gray shiny blocks or blue matte objects that are the same shape as the cyan rubber object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            10
+          ],
+          "_output": [
+            4
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 2,
+      "question_index": 122
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "How many things are either small purple metallic spheres or blue things that are the same size as the green matte cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6,
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            5,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            5,
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": 5,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            6,
+            7
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            4,
+            11
+          ],
+          "_output": [
+            1
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 3,
+      "question_index": 123
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000003.png",
+      "image_index": 3,
+      "image": "train_000003",
+      "question": "How many things are small green cylinders or gray objects that are the same material as the cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1,
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0,
+            2,
+            6
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            8
+          ],
+          "_output": [
+            2
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 0,
+      "question_index": 124
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000003.png",
+      "image_index": 3,
+      "image": "train_000003",
+      "question": "How many things are either tiny metallic cubes or large matte spheres that are the same color as the tiny cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            2
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3,
+            11
+          ],
+          "_output": [
+            1
+          ],
+          "function": "union",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": 1,
+          "function": "count",
+          "value_inputs": []
+        }
+      ],
+      "answer": "1",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/or_sim.json",
+      "question_family_index": 1,
+      "question_index": 125
+    }
+  ]
+}

@@ -1,0 +1,351 @@
+is a triangle a square
+is a triangle a square
+is a triangle a square
+is a triangle a square
+is a triangle a square
+is a triangle a square
+is a triangle a square
+is a triangle a square
+is a square a square
+is a square a square
+is a square a square
+is a square a square
+is a square a square
+is a square a square
+is a square a square
+is a square a square
+is a triangle a circle
+is a triangle a circle
+is a triangle a circle
+is a triangle a circle
+is a triangle a circle
+is a triangle a circle
+is a triangle a circle
+is a triangle a circle
+is a square a circle
+is a square a circle
+is a square a circle
+is a square a circle
+is a square a circle
+is a square a circle
+is a square a circle
+is a square a circle
+is a triangle a triangle
+is a triangle a triangle
+is a triangle a triangle
+is a triangle a triangle
+is a triangle a triangle
+is a triangle a triangle
+is a triangle a triangle
+is a triangle a triangle
+is a circle a circle
+is a circle a circle
+is a circle a circle
+is a circle a circle
+is a circle a circle
+is a circle a circle
+is a circle a circle
+is a circle a circle
+is a circle a square
+is a circle a square
+is a circle green
+is a circle green
+is a circle green
+is a circle green
+is a circle green
+is a circle green
+is a circle green
+is a circle green
+is a square red
+is a square red
+is a square red
+is a square red
+is a square red
+is a square red
+is a square red
+is a square red
+is a circle blue
+is a circle blue
+is a circle blue
+is a circle blue
+is a circle blue
+is a circle blue
+is a circle blue
+is a circle blue
+is a triangle red
+is a triangle red
+is a triangle red
+is a triangle red
+is a triangle red
+is a triangle red
+is a triangle red
+is a triangle red
+is a square blue
+is a square blue
+is a square blue
+is a square blue
+is a square blue
+is a square blue
+is a square blue
+is a square blue
+is a square green
+is a square green
+is a square green
+is a square green
+is a square green
+is a square green
+is a square green
+is a square green
+is a triangle blue
+is a triangle blue
+is a blue shape a square
+is a blue shape a square
+is a blue shape a square
+is a blue shape a square
+is a blue shape a square
+is a blue shape a square
+is a blue shape a square
+is a blue shape a square
+is a red shape a circle
+is a red shape a circle
+is a red shape a circle
+is a red shape a circle
+is a red shape a circle
+is a red shape a circle
+is a red shape a circle
+is a red shape a circle
+is a green shape a circle
+is a green shape a circle
+is a green shape a circle
+is a green shape a circle
+is a green shape a circle
+is a green shape a circle
+is a green shape a circle
+is a green shape a circle
+is a blue shape a triangle
+is a blue shape a triangle
+is a blue shape a triangle
+is a blue shape a triangle
+is a blue shape a triangle
+is a blue shape a triangle
+is a blue shape a triangle
+is a blue shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a green shape a triangle
+is a red shape a square
+is a red shape a square
+is a red shape a square
+is a red shape a square
+is a red shape a square
+is a red shape a square
+is a red shape a square
+is a red shape a square
+is a green shape a square
+is a green shape a square
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a green shape right of a blue shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a red shape above a green shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a green shape above a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a blue shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a red shape right of a green shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a blue shape above a blue shape
+is a green shape below a red shape
+is a green shape below a red shape
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle above left of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a circle left of right of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a triangle left of left of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle above right of a circle
+is a circle below below a circle
+is a circle below below a circle
+is a circle below below a circle
+is a circle below below a circle
+is a circle below below a circle
+is a circle below below a circle
+is a circle below below a circle
+is a circle below below a circle
+is a square right of below a triangle
+is a square right of below a triangle
+is a square right of below a triangle
+is a square right of below a triangle
+is a square right of below a triangle
+is a square right of below a triangle
+is a square right of below a triangle
+is a square right of below a triangle
+is a circle above below a square
+is a circle above below a square
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a triangle left of right of a green shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a circle right of below a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square right of above a red shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square below left of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square left of right of a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a square above above a green shape
+is a circle below below a red shape
+is a circle below below a red shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a triangle right of a green shape
+is a square left of a red shape
+is a square left of a red shape
+is a square left of a red shape
+is a square left of a red shape
+is a square left of a red shape
+is a square left of a red shape
+is a square left of a red shape
+is a square left of a red shape
+is a square below a red shape
+is a square below a red shape
+is a square below a red shape
+is a square below a red shape
+is a square below a red shape
+is a square below a red shape
+is a square below a red shape
+is a square below a red shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a triangle above a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a square right of a green shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a triangle above a red shape
+is a circle above a green shape
+is a circle above a green shape
+is a square right of a red shape

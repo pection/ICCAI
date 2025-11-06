@@ -1,0 +1,6027 @@
+{
+  "info": {
+    "split": "closure",
+    "license": "Creative Commons Attribution (CC BY 4.0)",
+    "version": "1.0",
+    "date": "31/01/20"
+  },
+  "questions": [
+    {
+      "split": "val",
+      "image_filename": "train_000009.png",
+      "image_index": 9,
+      "image": "train_000009",
+      "question": "Is there a small cyan object in front of the big sphere that is the same material as green thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            1,
+            4
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 82
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000009.png",
+      "image_index": 9,
+      "image": "train_000009",
+      "question": "Is there a large object left of the metallic thing that is the same size as metal sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            1,
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 83
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "Is there a big brown block in front of the large metal ball that is the same color as big cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3,
+            6,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3,
+            6,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            3,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 84
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "Is there a metal object behind the large brown thing that is the same shape as green object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            6
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1,
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 85
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "Is there a small object to the right of the large brown ball that is the same material as small block?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2,
+            4,
+            5,
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            3,
+            5,
+            6,
+            7
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3,
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            2,
+            5,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            2,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 86
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000002.png",
+      "image_index": 2,
+      "image": "train_000002",
+      "question": "Is there a big shiny sphere behind the rubber block that is the same size as red object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0,
+            2,
+            4,
+            5
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2,
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 87
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "Is there a large gray block in front of the metal thing that is the same color as big matte ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 88
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "Is there a brown object left of the small brown matte object that is the same shape as gray metallic object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            4,
+            5
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 89
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "Is there a big gray cube on the left side of the brown thing that is the same material as big sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2,
+            3,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            4
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 90
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000010.png",
+      "image_index": 10,
+      "image": "train_000010",
+      "question": "Is there a large blue metallic cube behind the matte sphere that is the same size as purple metal cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2,
+            3,
+            5
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 91
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "Is there a shiny thing in front of the small cylinder that is the same color as large rubber cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4,
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 5,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3,
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 92
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "Is there a gray matte ball on the right side of the large gray shiny object that is the same shape as green shiny thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            5,
+            6
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            1,
+            4,
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 93
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "Is there a large metallic cylinder in front of the gray cylinder that is the same material as big green cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            6
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3,
+            4,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 94
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000001.png",
+      "image_index": 1,
+      "image": "train_000001",
+      "question": "Is there a small cyan matte object in front of the cyan shiny cylinder that is the same size as cyan matte ball?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 95
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "Is there a yellow matte cylinder to the left of the metallic cylinder that is the same color as large rubber object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            4
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 96
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "Is there a brown matte object in front of the purple rubber thing that is the same shape as red shiny thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            4,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 97
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "Is there a cyan metal ball behind the small brown object that is the same material as purple cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1,
+            3,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 98
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000005.png",
+      "image_index": 5,
+      "image": "train_000005",
+      "question": "Is there a big object behind the shiny sphere that is the same size as purple rubber thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            5
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 99
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "Is there a cyan cylinder to the right of the shiny thing that is the same color as big matte cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 100
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "Is there a thing left of the object that is the same shape as metal object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 101
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "Is there a big object behind the big cylinder that is the same material as large gray thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            1
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 102
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000004.png",
+      "image_index": 4,
+      "image": "train_000004",
+      "question": "Is there a cyan matte thing on the left side of the cyan cylinder that is the same size as cyan shiny thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 103
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "Is there a big red object left of the shiny block that is the same color as tiny metallic cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            4,
+            7,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4,
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 104
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "Is there a tiny red object on the right side of the small shiny object that is the same shape as yellow rubber thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1,
+            5,
+            7
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 105
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "Is there a gray rubber cylinder in front of the small brown thing that is the same material as small red thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            4,
+            7,
+            8
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "red"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            1,
+            7
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            4,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 106
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000008.png",
+      "image_index": 8,
+      "image": "train_000008",
+      "question": "Is there a sphere behind the sphere that is the same size as gray object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            4,
+            7,
+            8
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            5,
+            8
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            1,
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 107
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "Is there a small object behind the small cube that is the same color as large matte thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 108
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "Is there a large block on the left side of the object that is the same shape as yellow metal object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 109
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "Is there a metal object on the left side of the purple block that is the same material as big cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            2,
+            3
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 110
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000000.png",
+      "image_index": 0,
+      "image": "train_000000",
+      "question": "Is there a tiny rubber object to the left of the metal object that is the same size as purple rubber sphere?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            1,
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 111
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "Is there a blue cylinder on the right side of the large sphere that is the same color as large cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            7
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            1,
+            2,
+            3,
+            5,
+            7
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 112
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "Is there a cyan thing behind the small cyan object that is the same shape as big green thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            5,
+            7
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            5,
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 113
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "Is there a small cyan rubber ball left of the tiny yellow object that is the same material as tiny purple thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            3
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "purple"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 3,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            6
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 114
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000007.png",
+      "image_index": 7,
+      "image": "train_000007",
+      "question": "Is there a big block in front of the cyan matte thing that is the same size as yellow cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            6
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 6,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            3,
+            4,
+            5,
+            7
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            2
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "front"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 115
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "Is there a tiny yellow matte sphere behind the rubber thing that is the same color as big cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            2,
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            1
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 116
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "Is there a green matte thing left of the blue thing that is the same shape as cyan thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            2,
+            3
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 117
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "Is there a small object left of the blue object that is the same material as cyan cylinder?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 7,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            0,
+            1,
+            3,
+            5,
+            6
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            2,
+            7
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            7
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": true,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "yes",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 118
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000011.png",
+      "image_index": 11,
+      "image": "train_000011",
+      "question": "Is there a tiny matte ball on the left side of the blue metallic object that is the same size as gray metal thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2
+          ],
+          "function": "same_size",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "blue"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [],
+          "function": "relate",
+          "value_inputs": [
+            "left"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "rubber"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 3,
+      "question_index": 119
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000003.png",
+      "image_index": 3,
+      "image": "train_000003",
+      "question": "Is there a gray thing on the right side of the small object that is the same color as small metal cube?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            6
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": [
+            1
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cube"
+          ]
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": 1,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            2
+          ],
+          "function": "same_color",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            2
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 2,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "gray"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 1,
+      "question_index": 120
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000003.png",
+      "image_index": 3,
+      "image": "train_000003",
+      "question": "Is there a ball right of the large brown object that is the same shape as cyan shiny thing?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "cyan"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 0,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            2,
+            3,
+            4,
+            6
+          ],
+          "function": "same_shape",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": [
+            0,
+            1,
+            2,
+            6
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "right"
+          ]
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 0,
+      "question_index": 121
+    },
+    {
+      "split": "val",
+      "image_filename": "train_000003.png",
+      "image_index": 3,
+      "image": "train_000003",
+      "question": "Is there a tiny green metal cylinder behind the large yellow ball that is the same material as big brown object?",
+      "program": [
+        {
+          "inputs": [],
+          "_output": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "function": "scene",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            0
+          ],
+          "_output": [
+            4,
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            1
+          ],
+          "_output": [
+            4
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "brown"
+          ]
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "_output": 4,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            3
+          ],
+          "_output": [
+            3,
+            5
+          ],
+          "function": "same_material",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            4
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "large"
+          ]
+        },
+        {
+          "inputs": [
+            5
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_color",
+          "value_inputs": [
+            "yellow"
+          ]
+        },
+        {
+          "inputs": [
+            6
+          ],
+          "_output": [
+            5
+          ],
+          "function": "filter_shape",
+          "value_inputs": [
+            "sphere"
+          ]
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "_output": 5,
+          "function": "unique",
+          "value_inputs": []
+        },
+        {
+          "inputs": [
+            8
+          ],
+          "_output": [
+            0,
+            4
+          ],
+          "function": "relate",
+          "value_inputs": [
+            "behind"
+          ]
+        },
+        {
+          "inputs": [
+            9
+          ],
+          "_output": [
+            0
+          ],
+          "function": "filter_size",
+          "value_inputs": [
+            "small"
+          ]
+        },
+        {
+          "inputs": [
+            10
+          ],
+          "_output": [],
+          "function": "filter_color",
+          "value_inputs": [
+            "green"
+          ]
+        },
+        {
+          "inputs": [
+            11
+          ],
+          "_output": [],
+          "function": "filter_material",
+          "value_inputs": [
+            "metal"
+          ]
+        },
+        {
+          "inputs": [
+            12
+          ],
+          "_output": [],
+          "function": "filter_shape",
+          "value_inputs": [
+            "cylinder"
+          ]
+        },
+        {
+          "inputs": [
+            13
+          ],
+          "_output": false,
+          "function": "exist",
+          "value_inputs": []
+        }
+      ],
+      "answer": "no",
+      "template_filename": "/home/dzmitry/dist/nmn-iwp/templates/delta/chain_sim_loc.json",
+      "question_family_index": 2,
+      "question_index": 122
+    }
+  ]
+}
