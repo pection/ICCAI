@@ -74,7 +74,7 @@ def main(args):
     for q_file, shift in zip(args.input_questions_json, q_family_shifts):
         print(q_file)
         # q_file = os.path.join("/mnt/c/Users/usEr/Desktop/ICCAI/unprocessed/train/HOP0-5/",q_file)
-        q_file = os.path.join("/mnt/c/Users/usEr/Desktop/ICCAI/question_json/",q_file)
+        q_file = os.path.join("/home/ubuntu/dataset/question_json/",q_file)
 
         full_path = os.path.abspath(q_file)
         print("Loading:", full_path)   # <-- now prints the full path
