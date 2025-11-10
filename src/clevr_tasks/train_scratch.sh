@@ -13,6 +13,7 @@ echo $MAX_Q
 
 # The Held Out Pair index must be between 0 and 28 inclusive.
 HOP_IDX="$2"
+echo "HOP_IDX=${HOP_IDX}"
 
 echo "Max Sequence Length:"
 MSL=49
