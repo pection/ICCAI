@@ -855,8 +855,8 @@ class CLEVR:
     def evaluate(self, dataloader: ClevrDataLoader, dump=None) -> Tuple[float, float]:
         """Evaluate all data in data_tuple."""
         quesid2answers, total_loss = self.predict(dataloader, dump)
-        for qid, info in quesid2answers.items():
-            print(f"{qid} | pred: {info['pred']} | target: {info['target']}")
+        # for qid, info in quesid2answers.items():
+        #     # print(f"{qid} | pred: {info['pred']} | target: {info['target']}")
         try:
             table = wandb.Table(columns=["qid", "question", "pred", "target", "correct"])
             n = 0
