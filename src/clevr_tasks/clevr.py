@@ -829,8 +829,11 @@ class CLEVR:
                 total_loss += loss.cpu().item()
 
                 score, label = logits.max(1)
-                for qid, l, target, logit_arr in zip(
-                    ques_id, label.cpu().numpy(), targets, logits
+                # for qid, l, target, logit_arr in zip(
+                #     ques_id, label.cpu().numpy(), targets, logits
+                # ):
+                for s, qid, l, target, logit_arr in zip(
+                    sent, ques_id, label.cpu().numpy(), targets, logits
                 ):
                     ans = self.vocab.answer_idx_to_token(l)
                     logit_arr = logit_arr.detach().cpu().numpy()
