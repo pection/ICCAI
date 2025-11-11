@@ -36,8 +36,7 @@ source alt_env/bin/activate
 export PYTHONPATH=${PYTHONPATH}:src
 
 # Run eval on minimal splits
-python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --dataset "clevr_atom_ho_exist" --optim none --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
 # python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --dataset "clevr_atom_ho_exist" --optim none --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
 
 # Run eval on complex splits
-# python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --optim bert --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
+python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --optim bert --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
