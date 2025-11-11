@@ -8,11 +8,11 @@ echo $RUN
 
 # Number of questions to train the model on. 
 # We experimented with 25000, 200000, and 560000
-MAX_Q="200000"
+MAX_Q="$1"
 echo $MAX_Q
 
 # The Held Out Pair index must be between 0 and 28 inclusive.
-HOP_IDX="2"
+HOP_IDX="$2"
 
 echo "HOP_IDX=${HOP_IDX}"
 
