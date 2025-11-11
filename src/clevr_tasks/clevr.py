@@ -17,7 +17,7 @@ import torch
 import torch.nn as nn
 from tqdm import tqdm
 
-
+import wandb
 from argparse import Namespace
 from pretrain.qa_answer_table import load_lxmert_qa
 from clevr_tasks.clevr_model import CLEVRModel
@@ -702,7 +702,14 @@ class CLEVR:
                     torch.nn.utils.clip_grad_norm_(self.model.parameters(), 5.0)
 
                 self.optim.step()
-
+                wandb.log(
+                    {
+                        "train/loss_step": float(loss.detach().cpu().item()),
+                        "train/step": curr_step,
+                        "train/epoch": epoch,
+                    },
+                    step=curr_step,
+                )
                 score, label = logit.max(1)
                 for qid, l, gt_tar in zip(ques_id, label.cpu().numpy(), target_strs):
                     ans = self.vocab.answer_idx_to_token(l)
@@ -726,12 +733,27 @@ class CLEVR:
                 if valid_score > best_valid:
                     best_valid = valid_score
                     self.save("BEST")
-
+                    wandb.run.summary["best_val_acc"] = float(best_valid)
                 log_str += "Epoch %d: Valid %0.2f\n" % (epoch, valid_score * 100.0)
             else:
                 log_str += "Epoch %d: Valid SKIPPED\n" % epoch
             log_str += "Epoch %d: Best %0.2f\n" % (epoch, best_valid * 100.0)
-
+            train_acc_epoch = (
+                sum(x["pred"] == x["target"] for x in quesid2ans.values()) / max(1, len(quesid2ans))
+            )
+            log_payload = {
+                "train/acc_epoch": float(train_acc_epoch),
+                "train/epoch": epoch,
+                "train/step": curr_step,
+                "best/val_acc": float(best_valid),
+            }
+            if args.num_val_evals < 0 or epoch in val_epochs or interrupted_epoch:
+                log_payload.update(
+                    {
+                        "val/acc": float(valid_score),
+                    }
+                )
+            wandb.log(log_payload, step=curr_step)
             print(log_str, end="")
 
             with open(self.output + "/log.log", "a") as f:
@@ -936,6 +958,13 @@ def main(
     # Test or Train
     if args.test is not None:
         print("Start evaluation")
+        wandb.init(
+            project="ICCAI-CLEVR",
+            name=f"eval-{args.dataset}-ho{args.ho_idx}",
+            config={"dataset": args.dataset, "ho_idx": args.ho_idx, "mode": "eval-only"},
+            mode="online",
+        )
+
         args.fast = args.tiny = False  # Always loading all data in test
         if "test" in args.test:
             if args.dataset != "clevr_atom_ho_exist":
@@ -949,6 +978,7 @@ def main(
                     dump=os.path.join(args.output, test_pred_name),
                 )
             print(f"Test Acc: {result}\nTest Loss: {total_loss}")
+            wandb.log({"test/acc": float(result), "test/loss": float(total_loss)})
             with open(os.path.join(args.output, test_perf_name), "w") as outfile:
                 print(result, file=outfile)
             with open(os.path.join(args.output, test_loss_name), "w") as outfile:
@@ -975,6 +1005,7 @@ def main(
                 dump=os.path.join(args.output, val_pred_name),
             )
             print(f"Val Acc: {result}\nVal Loss: {total_loss}")
+            wandb.log({"val/acc": float(result), "val/loss": float(total_loss)})
             with open(os.path.join(args.output, val_perf_name), "w") as outfile:
                 print(result, file=outfile)
             with open(os.path.join(args.output, val_loss_name), "w") as outfile:
@@ -983,6 +1014,23 @@ def main(
             assert False, "No such test option for %s" % args.test
     else:
         print("Start training:")
+    # ---- W&B init ----
+        wandb.init(
+            project="ICCAI-CLEVR",
+            name=f"{args.dataset}-ho{args.ho_idx}-run{getattr(args, 'run', 0)}",
+            config={
+                "dataset": args.dataset,
+                "ho_idx": args.ho_idx,
+                "epochs": args.epochs,
+                "batch_size": args.batch_size,
+                "lr": args.lr,
+                "train_steps": args.train_steps,
+                "max_seq_length": args.max_seq_length,
+                "optimizer": args.optim if isinstance(args.optim, str) else str(args.optim),
+            },
+            mode="online",   # change to "offline" if no internet
+        )
+        wandb.watch(clevr.model, log="all", log_freq=100)
         clevr.train(
             dm.train_dataloader(),
             dm.val_dataloader()[0],
