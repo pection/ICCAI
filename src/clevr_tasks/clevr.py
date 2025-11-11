@@ -711,13 +711,35 @@ class CLEVR:
                     step=curr_step,
                 )
                 score, label = logit.max(1)
-                for qid, l, gt_tar in zip(ques_id, label.cpu().numpy(), target_strs):
+                # for qid, l, gt_tar in zip(ques_id, label.cpu().numpy(), target_strs):
+                #     ans = self.vocab.answer_idx_to_token(l)
+                #     # ans = dset.label2ans[l]
+                #     quesid2ans[qid.item()] = {
+                #         "pred": ans,
+                #         "target": gt_tar,
+                #     }  # NOTE: Tweaked from original code (there it was just ans)
+
+                batch_rows = []
+                for s, qid, l, gt_tar in zip(sent, ques_id, label.cpu().numpy(), target_strs):
                     ans = self.vocab.answer_idx_to_token(l)
-                    # ans = dset.label2ans[l]
-                    quesid2ans[qid.item()] = {
+                    row = {
+                        "qid": int(qid.item()),
+                        "question": s,
                         "pred": ans,
                         "target": gt_tar,
-                    }  # NOTE: Tweaked from original code (there it was just ans)
+                        "correct": bool(ans == gt_tar),
+                        "epoch": int(epoch),
+                        "step": int(curr_step),
+                    }
+                    batch_rows.append(row)
+                    quesid2ans[row["qid"]] = {"pred": ans, "target": gt_tar, "question": s}
+
+                # log a small sample from this batch every ~500 steps
+                if curr_step % 500 == 0 and len(batch_rows) > 0:
+                    t = wandb.Table(columns=["qid", "question", "pred", "target", "correct", "epoch", "step"])
+                    for r in batch_rows[:10]:  # cap to 10 per log
+                        t.add_data(r["qid"], r["question"], r["pred"], r["target"], r["correct"], r["epoch"], r["step"])
+                    wandb.log({"train/examples": t}, step=curr_step)
 
                 curr_step += 1
 
@@ -816,7 +838,9 @@ class CLEVR:
                         len(self.vocab.vocab["answer_token_to_idx"]),
                     )
                     logit_arr = logit_arr.tolist()
-                    quesid2ans[qid.item()] = {"pred": ans, "target": target}
+                    # quesid2ans[qid.item()] = {"pred": ans, "target": target}
+                    quesid2ans[qid.item()] = {"pred": ans, "target": target, "question": s}
+
                     # , 'logits': logit_arr} # NOTE: Tweaked from original code (there it was just ans)
                     #  Note: removed logits saving b/c it was too space consuming  -- 140MB for each CLEVR-HO val
         if dump is not None:
@@ -830,7 +854,17 @@ class CLEVR:
         quesid2answers, total_loss = self.predict(dataloader, dump)
         for qid, info in quesid2answers.items():
             print(f"{qid} | pred: {info['pred']} | target: {info['target']}")
-
+        try:
+            table = wandb.Table(columns=["qid", "question", "pred", "target", "correct"])
+            n = 0
+            for qid, info in quesid2answers.items():
+                table.add_data(int(qid), info.get("question", ""), info["pred"], info["target"], bool(info["pred"] == info["target"]))
+                n += 1
+                if n >= 100:
+                    break
+            wandb.log({"eval/examples": table})
+        except Exception as e:
+            print(f"W&B table log skipped: {e}")
         return (
             sum(x["pred"] == x["target"] for x in quesid2answers.values())
             / len(quesid2answers),
@@ -964,6 +998,15 @@ def main(
             config={"dataset": args.dataset, "ho_idx": args.ho_idx, "mode": "eval-only"},
             mode="online",
         )
+        HOP_NAMES = [
+            "Rubber cylinder","Rubber cyan","Large rubber","Cyan cylinder","Large cylinder","Large cyan",
+            "Rubber sphere","Rubber brown","Small rubber","Brown sphere","Small sphere","Small brown",
+            "Metal cylinder","Metal red","Small metal","Red cylinder","Small cylinder","Small red",
+            "Metal cube","Metal gray","Large metal","Gray cube","Large cube","Large gray",
+            "Rubber cube","Rubber purple","Purple sphere","Small cube","Small purple"
+        ]
+
+        print(f"Running HOP {args.ho_idx}: {HOP_NAMES[args.ho_idx]}")
 
         args.fast = args.tiny = False  # Always loading all data in test
         if "test" in args.test:
