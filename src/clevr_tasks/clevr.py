@@ -1,4 +1,4 @@
-"""
+`"""
 vqa.py modified for CLEVR.
 
 max clevr question length exposed, instead of fixed to 20.
@@ -682,7 +682,7 @@ class CLEVR:
                 self.optim.zero_grad()
 
                 # feats, boxes, target = feats.cuda(), boxes.cuda(), target.cuda()
-                logit = self.model(feats, boxes, sent)
+                logit = self.model(feats, boxes, sent) ## get model
                 assert logit.dim() == target.dim() == 2
                 loss = self.bce_loss(logit, target)
                 loss = loss * logit.size(1)
@@ -1088,7 +1088,6 @@ def main(
             best_valid=best_val,
         )
 
-
 if __name__ == "__main__":
     print(args)
 
@@ -1163,3 +1162,4 @@ if __name__ == "__main__":
         val_perf_name=vpern,
         val_loss_name=vlossn,
     )
+`
