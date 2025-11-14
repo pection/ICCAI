@@ -808,9 +808,9 @@ class CLEVR:
             ques_id = batch[1]
             all_img_feats = batch[2]
             feats = all_img_feats["roi_features"]
-            print(f"roi_features = {feats}")
+            # print(f"roi_features = {feats}")
             boxes = all_img_feats["normalized_boxes"]
-            print(f"boxes = {boxes}")
+            # print(f"boxes = {boxes}")
 
             targets = batch[4]
             # ques_id, feats, boxes, sent = datum_tuple[:4]
