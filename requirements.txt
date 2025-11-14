@@ -17,7 +17,7 @@ wget==3.2
 opencv-python==4.5.5.64
 mlflow==1.22.0
 optuna==2.10.0
-pytorch-lightning==1.6.0
+# pytorch-lightning==1.6.0
 # -f https://download.pytorch.org/whl/torch_stable.html 
 # torch==1.11.0+cu102
 # -f https://download.pytorch.org/whl/torch_stable.html 
