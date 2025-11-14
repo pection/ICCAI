@@ -1,4 +1,4 @@
-`"""
+"""
 vqa.py modified for CLEVR.
 
 max clevr question length exposed, instead of fixed to 20.
