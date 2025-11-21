@@ -30,4 +30,4 @@ echo $LEARNING_RATE
 
 source alt_env/bin/activate
 export PYTHONPATH=${PYTHONPATH}:src
-python3 src/clevr_tasks/clevr.py --fromScratch --max_seq_length $MSL --preemptable  --dataset clevr_ho --max_questions $MAX_Q --train_steps $TRAIN_STEPS  --epochs 999999 --ho_idx ${HOP_IDX} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --optim bert --lr $LEARNING_RATE --tqdm --output snap/clevr/fromScratch/run${RUN}_clevr_ntnv_ho${HOP_IDX}_msl${MSL}_scale${MAX_Q}_steps481k_lr1e-5  --clevr_config "src/clevr_tasks/symlink_config.yaml"
+python3 src/clevr_tasks/clevr.py --fromScratch --max_seq_length $MSL --preemptable  --dataset clevr_ho --max_questions $MAX_Q --train_steps $TRAIN_STEPS  --epochs 999999 --ho_idx ${HOP_IDX} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 16 --optim bert --lr $LEARNING_RATE --tqdm --output snap/clevr/fromScratch/run${RUN}_clevr_ntnv_ho${HOP_IDX}_msl${MSL}_scale${MAX_Q}_steps481k_lr1e-5  --clevr_config "src/clevr_tasks/symlink_config.yaml"
