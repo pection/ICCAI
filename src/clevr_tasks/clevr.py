@@ -1087,10 +1087,13 @@ def main(
             start_step=start_step,
             best_valid=best_val,
         )
-
+def set_other_seeds(seed):
+    torch.backends.cudnn.benchmark = False
+    #torch.backends.cudnn.deterministic = True
+    os.environ['PYTHONHASHSEED'] = str(seed)
 if __name__ == "__main__":
     print(args)
-
+    set_other_seeds(42)
     if args.train is not None:
         raise ValueError("--train is not used by CLEVR; please remove flag")
     if args.valid is not None:
