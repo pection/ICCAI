@@ -31,6 +31,7 @@ import yaml
 import math
 from typing import Tuple
 import numpy as np
+import matplotlib.pyplot as plt
 
 # Must be last to overwrite any previous loading
 from param import args
@@ -504,7 +505,7 @@ class CLEVR:
         self,
         max_clevr_length: int,
         dm: GenericCLEVRDataModule,
-        device: str = "cuda",
+        device: str = "cpu",
         total_steps=None,
         ignore_num_loaders: bool = False,
     ):
@@ -551,7 +552,8 @@ class CLEVR:
             )
 
         # Transfer model to GPU before apex.
-        self.model = self.model.cuda()
+        # self.model = self.model.cuda()
+        self.model = self.model.to(self.device)
 
         # Loss and Optimizer
         self.bce_loss = nn.BCEWithLogitsLoss()
@@ -882,7 +884,9 @@ class CLEVR:
 
     def load(self, path):
         print("Load model from %s" % path)
-        state_dict = torch.load("%s.pth" % path)
+        # state_dict = torch.load("%s.pth" % path)
+        state_dict = torch.load("%s.pth" % path, map_location=torch.device("cpu"))
+
         self.model.load_state_dict(state_dict)
 
     def save_preempt(self, next_epoch: int, start_step: int, best_val: float):
@@ -1087,7 +1091,11 @@ def main(
             start_step=start_step,
             best_valid=best_val,
         )
-
+def to_rgb_numpy(feat_tensor):
+    """Convert feats from (C,H,W) FloatTensor to RGB numpy (H,W,3)."""
+    img = feat_tensor.numpy().transpose(1, 2, 0)
+    img = (img * 255).clip(0, 255).astype("uint8")
+    return img
 if __name__ == "__main__":
     print(args)
 
@@ -1152,5 +1160,43 @@ if __name__ == "__main__":
 
     else:
         raise NotImplementedError()
+    dm =in_dm
+    dm.as_tokens = False
+    dm.prepare_data()
+    dm.setup()
+    # if "val" in args.test:
+    #     loader = dm.val_dataloader()[0]
+    #     split = "val"
+    # else:
+    # loader = dm.val_dataloader()[1]
+    loader = dm.test_dataloader()[0]
+    split = "test"
+    os.makedirs("img_qid_output", exist_ok=True)
 
-    print(in_dm)
+    max_show = 20
+    for batch in loader:
+        feat_batch = batch[2]   # features
+        qid_batch = batch[1]    # qid
+
+        if torch.is_tensor(qid_batch):
+            qids = qid_batch.cpu().tolist()
+        else:
+            qids = list(qid_batch)
+
+        imgs = feat_batch      # Tensor (B, C, H, W) if you’re using raw images
+        print(type(imgs))
+        print(type(qids))
+        print(imgs)
+        print(qids)
+        for img_tensor, qid in zip(imgs, qids):
+            rgb = to_rgb_numpy(img_tensor)
+            plt.imshow(rgb)
+            plt.axis("off")
+            plt.title(f"{split.upper()} | QID={qid}")
+            out_path = f"img_qid_output/{split}_qid_{qid}.png"
+            plt.savefig(out_path, dpi=150, bbox_inches="tight")
+            plt.close()
+
+            max_show -= 1
+            if max_show <= 0:
+                print("Done")

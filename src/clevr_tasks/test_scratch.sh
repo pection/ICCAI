@@ -31,8 +31,6 @@ echo "ho=${HO}"
 echo ${CKPT_DIR}
 echo "----------------------------------------------"
 
-
-source alt_env/bin/activate
 export PYTHONPATH=${PYTHONPATH}:src
 
 # Run eval on minimal splits
