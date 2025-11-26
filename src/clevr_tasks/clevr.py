@@ -504,7 +504,7 @@ class CLEVR:
         self,
         max_clevr_length: int,
         dm: GenericCLEVRDataModule,
-        device: str = "cuda",
+        device: str = "cpu",
         total_steps=None,
         ignore_num_loaders: bool = False,
     ):
@@ -551,7 +551,8 @@ class CLEVR:
             )
 
         # Transfer model to GPU before apex.
-        self.model = self.model.cuda()
+        # self.model = self.model.cuda()
+        self.model = self.model.to(self.device)
 
         # Loss and Optimizer
         self.bce_loss = nn.BCEWithLogitsLoss()
@@ -882,7 +883,9 @@ class CLEVR:
 
     def load(self, path):
         print("Load model from %s" % path)
-        state_dict = torch.load("%s.pth" % path)
+        # state_dict = torch.load("%s.pth" % path)
+        state_dict = torch.load("%s.pth" % path, map_location=torch.device("cpu"))
+
         self.model.load_state_dict(state_dict)
 
     def save_preempt(self, next_epoch: int, start_step: int, best_val: float):
