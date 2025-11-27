@@ -1093,7 +1093,10 @@ def set_other_seeds(seed):
     os.environ['PYTHONHASHSEED'] = str(seed)
 if __name__ == "__main__":
     print(args)
-    set_other_seeds(42)
+    SEED_MANUL = 42
+    set_other_seeds(SEED_MANUL)
+    print(f"SEED = {SEED_MANUL}")
+
     if args.train is not None:
         raise ValueError("--train is not used by CLEVR; please remove flag")
     if args.valid is not None:
