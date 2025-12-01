@@ -1002,7 +1002,7 @@ def main(
             project="ICCAI-CLEVR",
             name=f"eval-{args.dataset}-ho{args.ho_idx}",
             config={"dataset": args.dataset, "ho_idx": args.ho_idx, "mode": "eval-only"},
-            mode="offline",
+            mode="online",
         )
         HOP_NAMES = [
             "Rubber cylinder","Rubber cyan","Large rubber","Cyan cylinder","Large cylinder","Large cyan",
@@ -1077,7 +1077,7 @@ def main(
                 "max_seq_length": args.max_seq_length,
                 "optimizer": args.optim if isinstance(args.optim, str) else str(args.optim),
             },
-            mode="offline",   # change to "offline" if no internet
+            mode="online",   # change to "offline" if no internet
         )
         wandb.watch(clevr.model, log="all", log_freq=100)
         clevr.train(
