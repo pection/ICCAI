@@ -735,11 +735,11 @@ class CLEVR:
                     quesid2ans[row["qid"]] = {"pred": ans, "target": gt_tar, "question": s}
 
                 # log a small sample from this batch every ~500 steps
-                if curr_step % 500 == 0 and len(batch_rows) > 0:
-                    t = wandb.Table(columns=["qid", "question", "pred", "target", "correct", "epoch", "step"])
-                    for r in batch_rows[:10]:  # cap to 10 per log
-                        t.add_data(r["qid"], r["question"], r["pred"], r["target"], r["correct"], r["epoch"], r["step"])
-                    wandb.log({"train/examples": t}, step=curr_step)
+                # if curr_step % 500 == 0 and len(batch_rows) > 0:
+                #     t = wandb.Table(columns=["qid", "question", "pred", "target", "correct", "epoch", "step"])
+                #     for r in batch_rows[:10]:  # cap to 10 per log
+                #         t.add_data(r["qid"], r["question"], r["pred"], r["target"], r["correct"], r["epoch"], r["step"])
+                #     wandb.log({"train/examples": t}, step=curr_step)
 
                 curr_step += 1
 
@@ -860,17 +860,17 @@ class CLEVR:
         quesid2answers, total_loss = self.predict(dataloader, dump)
         # for qid, info in quesid2answers.items():
         #     # print(f"{qid} | pred: {info['pred']} | target: {info['target']}")
-        try:
-            table = wandb.Table(columns=["qid", "question", "pred", "target", "correct"])
-            n = 0
-            for qid, info in quesid2answers.items():
-                table.add_data(int(qid), info.get("question", ""), info["pred"], info["target"], bool(info["pred"] == info["target"]))
-                n += 1
-                if n >= 100:
-                    break
-            wandb.log({"eval/examples": table})
-        except Exception as e:
-            print(f"W&B table log skipped: {e}")
+        # try:
+        #     table = wandb.Table(columns=["qid", "question", "pred", "target", "correct"])
+        #     n = 0
+        #     for qid, info in quesid2answers.items():
+        #         table.add_data(int(qid), info.get("question", ""), info["pred"], info["target"], bool(info["pred"] == info["target"]))
+        #         n += 1
+        #         if n >= 100:
+        #             break
+        #     wandb.log({"eval/examples": table})
+        # except Exception as e:
+        #     print(f"W&B table log skipped: {e}")
         return (
             sum(x["pred"] == x["target"] for x in quesid2answers.values())
             / len(quesid2answers),
