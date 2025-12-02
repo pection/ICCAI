@@ -1079,7 +1079,7 @@ def main(
             },
             mode="online",   # change to "offline" if no internet
         )
-        wandb.watch(clevr.model, log="all", log_freq=100)
+        # wandb.watch(clevr.model, log="all", log_freq=100)
         clevr.train(
             dm.train_dataloader(),
             dm.val_dataloader()[0],
