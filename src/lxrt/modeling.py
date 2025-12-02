@@ -418,6 +418,7 @@ class BertAttentionImprovedV2(nn.Module):
         entropy_reg: float = 0.0,
         use_film: bool = True,
     ):
+        print(f"BertattentionimprovedV2")
         super().__init__()
         if ctx_dim is None:
             ctx_dim = config.hidden_size
