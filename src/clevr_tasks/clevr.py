@@ -1087,10 +1087,19 @@ def main(
             start_step=start_step,
             best_valid=best_val,
         )
-def set_other_seeds(seed):
-    torch.backends.cudnn.benchmark = False
+def set_other_seeds(SEED):
+    import random
+    random.seed(SEED)
+    np.random.seed(SEED)
+    torch.manual_seed(SEED)
+    torch.cuda.manual_seed(SEED)
+    torch.cuda.manual_seed_all(SEED)
+
+    # Make cuDNN deterministic
     torch.backends.cudnn.deterministic = True
-    os.environ['PYTHONHASHSEED'] = str(seed)
+    torch.backends.cudnn.benchmark = False
+
+    os.environ["PYTHONHASHSEED"] = str(SEED)
 if __name__ == "__main__":
     print(args)
     SEED_MANUL = 42
