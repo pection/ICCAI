@@ -1089,7 +1089,7 @@ def main(
         )
 def set_other_seeds(seed):
     torch.backends.cudnn.benchmark = False
-    #torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.deterministic = True
     os.environ['PYTHONHASHSEED'] = str(seed)
 if __name__ == "__main__":
     print(args)
