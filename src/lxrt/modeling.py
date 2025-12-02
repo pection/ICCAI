@@ -389,10 +389,8 @@ class BertAttention(nn.Module):
 #
 #  © 2025 MARSAIL — All rights reserved.
 # ------------------------------------------------------------------------------
-
 import math
 from typing import Optional, Tuple
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
@@ -406,7 +404,6 @@ class RMSNorm(nn.Module):
         self.scale = nn.Parameter(torch.ones(dim))
 
     def forward(self, x):
-        # x: (..., dim)
         rms = x.pow(2).mean(-1, keepdim=True).add(self.eps).sqrt()
         return x / rms * self.scale
 
@@ -421,25 +418,13 @@ class BertAttentionImprovedV2(nn.Module):
         entropy_reg: float = 0.0,
         use_film: bool = True,
     ):
-        """
-        Args:
-            config: object with attributes hidden_size, num_attention_heads,
-                    attention_probs_dropout_prob
-            ctx_dim: dimension of context tokens (visual features). If None, uses hidden_size.
-            max_ctx_len: maximum context tokens (for relative position bias table)
-            use_scene_token: whether to prepend a learnable scene/global token to context keys/values
-            entropy_reg: weight for attention entropy regularizer (>=0)
-            use_film: whether to keep FiLM-style modulation (improved variant)
-        """
         super().__init__()
         if ctx_dim is None:
             ctx_dim = config.hidden_size
 
         if config.hidden_size % config.num_attention_heads != 0:
-            raise ValueError(
-                "hidden_size must be divisible by num_attention_heads"
-            )
-        print(f"BertattentionImproveV2")
+            raise ValueError("hidden_size must be divisible by num_attention_heads")
+
         self.hidden_size = config.hidden_size
         self.num_attention_heads = config.num_attention_heads
         self.attention_head_size = config.hidden_size // config.num_attention_heads
@@ -451,7 +436,7 @@ class BertAttentionImprovedV2(nn.Module):
         self.entropy_reg = float(entropy_reg)
         self.use_film = use_film
 
-        # Normalization for stability
+        # Normalization
         self.query_norm = RMSNorm(self.hidden_size)
         self.context_norm = RMSNorm(self.ctx_dim)
 
@@ -460,7 +445,7 @@ class BertAttentionImprovedV2(nn.Module):
         self.key = nn.Linear(self.ctx_dim, self.all_head_size, bias=False)
         self.value = nn.Linear(self.ctx_dim, self.all_head_size, bias=False)
 
-        # FiLM-style small MLP: query -> (scale, shift) for key/value per head-block
+        # FiLM-style modulation
         if self.use_film:
             film_mid = max(64, self.attention_head_size)
             self.film_proj = nn.Sequential(
@@ -469,21 +454,18 @@ class BertAttentionImprovedV2(nn.Module):
                 nn.Linear(film_mid, 2 * self.all_head_size)
             )
 
-        # Scene/global token to capture global context (learnable)
+        # Scene/global token
         if self.use_scene_token:
-            # one token per batch will be expanded; project into ctx_dim space
             self.scene_token = nn.Parameter(torch.randn(1, 1, self.ctx_dim) * 0.02)
 
-        # Value skip gate: learnable scalar per head to blend raw context and projected value
-        self.value_blend = nn.Parameter(torch.zeros(self.num_attention_heads))  # init near 0 -> prefer projected value slightly
+        # Value skip gate
+        self.value_blend = nn.Parameter(torch.zeros(self.num_attention_heads))
 
-        # Per-head bounded logit scale (sigmoid * max_scale)
-        # we parameterize pre_sigmoid and have a max_scale to keep it bounded
+        # Bounded per-head logit scale
         self.logit_scale_pre = nn.Parameter(torch.zeros(self.num_attention_heads))
-        self.logit_scale_max = 10.0  # maximum multiplier (tunable)
+        self.logit_scale_max = 10.0
 
-        # Relative position bias table
-        # supports relative distances in range [-max_ctx_len+1, max_ctx_len-1]
+        # Relative position bias
         table_size = 2 * max_ctx_len - 1
         self.relative_attention_bias = nn.Parameter(torch.zeros(table_size, self.num_attention_heads))
 
@@ -491,7 +473,7 @@ class BertAttentionImprovedV2(nn.Module):
         self.dropout = nn.Dropout(config.attention_probs_dropout_prob)
         self.softmax = nn.Softmax(dim=-1)
 
-        # Initialization tweaks
+        # Initialization
         nn.init.normal_(self.query.weight, std=0.02)
         nn.init.normal_(self.key.weight, std=0.02)
         nn.init.normal_(self.value.weight, std=0.02)
@@ -500,129 +482,113 @@ class BertAttentionImprovedV2(nn.Module):
         nn.init.constant_(self.logit_scale_pre, 0.0)
 
     def transpose_for_scores(self, x: torch.Tensor) -> torch.Tensor:
-        # x: (B, seq_len, all_head_size) -> (B, H, seq_len, Dh)
         B, L, _ = x.size()
         x = x.view(B, L, self.num_attention_heads, self.attention_head_size)
         return x.permute(0, 2, 1, 3).contiguous()
 
     def _get_rel_pos_bias(self, q_len: int, k_len: int, device: torch.device):
-        # q positions: [0..q_len-1], k positions: [0..k_len-1]
-        # relative position = k - q  (range: -(q_len-1) .. (k_len-1))
-        # but we clip/table-lookup using max_ctx_len
         max_rel = self.max_ctx_len
-        # clamp lengths to table capacity
         q_positions = torch.arange(q_len, device=device)[:, None]
         k_positions = torch.arange(k_len, device=device)[None, :]
-        rel_pos = k_positions - q_positions  # shape (q_len, k_len)
-        # shift index by (max_ctx_len - 1)
+        rel_pos = k_positions - q_positions
         index = (rel_pos + (max_rel - 1)).clamp(0, 2 * max_rel - 2).long()
-        # lookup -> (q_len, k_len, num_heads) then permute to (num_heads, q_len, k_len)
         bias = self.relative_attention_bias[index.view(-1)].view(q_len, k_len, self.num_attention_heads)
-        bias = bias.permute(2, 0, 1).unsqueeze(0)  # (1, H, q_len, k_len)
-        return bias  # broadcastable over batch
+        bias = bias.permute(2, 0, 1).unsqueeze(0)
+        return bias
 
     def forward(
         self,
-        hidden_states: torch.Tensor,                # (B, Tq, H)
-        context: torch.Tensor,                      # (B, Tc, C)
-        attention_mask: Optional[torch.Tensor] = None,  # (B, 1, 1, Tc') broadcastable
+        hidden_states: torch.Tensor,
+        context: torch.Tensor,
+        attention_mask: Optional[torch.Tensor] = None,
         return_attentions: bool = False,
         return_entropy_loss: bool = False,
     ) -> Tuple[torch.Tensor, Optional[torch.Tensor], Optional[torch.Tensor]]:
-        """
-        Returns:
-            context_layer: (B, Tq, H)
-            optionally: attn_probs (B, H, Tq, Tc'), entropy_loss scalar
-        """
 
         B, Tq, _ = hidden_states.size()
         Tc = context.size(1)
 
-        # Add scene token to context if requested
+        # Scene token
         if self.use_scene_token:
-            # expand scene token for batch
-            scene = self.scene_token.expand(B, -1, -1)  # (B,1,ctx_dim)
-            # prepend to context
+            scene = self.scene_token.expand(B, -1, -1)
             context = torch.cat([scene, context], dim=1)
             Tc_eff = Tc + 1
         else:
             Tc_eff = Tc
 
-        # Normalize
+        # Norm
         q_normed = self.query_norm(hidden_states)
         ctx_normed = self.context_norm(context)
 
         # Projections
-        mixed_query = self.query(q_normed)    # (B, Tq, all_head_size)
-        mixed_key = self.key(ctx_normed)      # (B, Tc_eff, all_head_size)
-        mixed_value = self.value(ctx_normed)  # (B, Tc_eff, all_head_size)
+        mixed_query = self.query(q_normed)
+        mixed_key = self.key(ctx_normed)
+        mixed_value = self.value(ctx_normed)
 
-        # Optional FiLM modulation (query -> scale/shift)
+        # Optional FiLM modulation
         if self.use_film:
-            film_params = self.film_proj(q_normed)  # (B, Tq, 2*all_head_size)
-            scale, shift = torch.chunk(film_params, 2, dim=-1)  # each (B, Tq, all_head_size)
-            # reshape to heads and average over queries (lightweight conditioning)
-            scale_h = self.transpose_for_scores(scale).mean(dim=2, keepdim=True)  # (B,H,1,Dh)
-            shift_h = self.transpose_for_scores(shift).mean(dim=2, keepdim=True)  # (B,H,1,Dh)
-            # apply to keys/values
+            film_params = self.film_proj(q_normed)
+            scale, shift = torch.chunk(film_params, 2, dim=-1)
+            scale_h = self.transpose_for_scores(scale).mean(dim=2, keepdim=True)
+            shift_h = self.transpose_for_scores(shift).mean(dim=2, keepdim=True)
             key_h = self.transpose_for_scores(mixed_key) * (1.0 + scale_h) + shift_h
             value_h = self.transpose_for_scores(mixed_value) * (1.0 + scale_h) + shift_h
         else:
             key_h = self.transpose_for_scores(mixed_key)
             value_h = self.transpose_for_scores(mixed_value)
 
-        query_h = self.transpose_for_scores(mixed_query)  # (B,H,Tq,Dh)
+        query_h = self.transpose_for_scores(mixed_query)
 
-        # Compute attention scores
-        attn_scores = torch.matmul(query_h, key_h.transpose(-1, -2))  # (B,H,Tq,Tc_eff)
+        # Attention scores
+        attn_scores = torch.matmul(query_h, key_h.transpose(-1, -2))
         attn_scores = attn_scores / math.sqrt(self.attention_head_size)
 
-        # Apply bounded per-head logit scale: sigmoid(pre) * max_scale
+        # Per-head logit scale
         scale = torch.sigmoid(self.logit_scale_pre).view(1, self.num_attention_heads, 1, 1) * self.logit_scale_max
         attn_scores = attn_scores * scale
 
-        # Add relative position bias
-        rel_bias = self._get_rel_pos_bias(q_len=Tq, k_len=Tc_eff, device=hidden_states.device)  # (1,H,Tq,Tc_eff)
+        # Relative position bias
+        rel_bias = self._get_rel_pos_bias(Tq, Tc_eff, device=hidden_states.device)
         attn_scores = attn_scores + rel_bias
 
-        # Apply attention mask if provided (assumed additive mask with -inf on masked)
+        # -------------------------
+        # Attention mask fix (handles scene token)
+        # -------------------------
         if attention_mask is not None:
-            attn_scores = attn_scores + attention_mask
+            am = attention_mask
+            if not torch.is_tensor(am):
+                am = torch.tensor(am, device=hidden_states.device)
+            if am.dtype == torch.bool:
+                am = (~am).to(dtype=attn_scores.dtype) * -1e9
+            last_dim = am.size(-1)
+            if self.use_scene_token and last_dim == Tc:
+                pad_vals = torch.zeros(am.shape[:-1] + (1,), dtype=am.dtype, device=am.device)
+                am = torch.cat([pad_vals, am], dim=-1)
+            elif last_dim != Tc_eff:
+                raise RuntimeError(f"Attention mask last-dim ({last_dim}) does not match Tc_eff ({Tc_eff})")
+            attn_scores = attn_scores + am
 
-        attn_probs = self.softmax(attn_scores)  # (B,H,Tq,Tc_eff)
+        attn_probs = self.softmax(attn_scores)
 
-        # Attention entropy regularizer (optional)
+        # Entropy regularizer
         entropy_loss = None
         if self.entropy_reg > 0.0 or return_entropy_loss:
-            # compute per-head entropy averaged
-            # small epsilon for numeric stability
             p = attn_probs.clamp(min=1e-9)
-            ent = -(p * p.log()).sum(dim=-1)  # (B,H,Tq)
-            ent_mean = ent.mean()  # scalar
-            # we may want to encourage lower entropy -> sharper attn, so regularizer = ent_mean
-            entropy_loss = ent_mean * float(self.entropy_reg)
+            ent = -(p * p.log()).sum(dim=-1)
+            entropy_loss = ent.mean() * float(self.entropy_reg)
 
-        # Value blending: combine original context residual (projected back) and value_h
-        # reshape value_h -> (B,H,Tc_eff,Dh)
-        # compute blend per head scalar in (0,1): sigmoid(value_blend)
-        blend = torch.sigmoid(self.value_blend).view(1, self.num_attention_heads, 1, 1)  # (1,H,1,1)
-        # Also compute a light residual of pre-projected context (projected through a small linear)
-        # to keep it cheap, reuse mixed_key as a proxy for original content (same dim)
-        res_val = self.transpose_for_scores(mixed_key)  # (B,H,Tc_eff,Dh)
+        # Value blending
+        blend = torch.sigmoid(self.value_blend).view(1, self.num_attention_heads, 1, 1)
+        res_val = self.transpose_for_scores(mixed_key)
         value_h = value_h * (1.0 - blend) + res_val * blend
 
-        # Apply dropout to attention
+        # Dropout & aggregation
         attn_probs = self.dropout(attn_probs)
-
-        # Context aggregation
-        context_layer = torch.matmul(attn_probs, value_h)  # (B,H,Tq,Dh)
+        context_layer = torch.matmul(attn_probs, value_h)
         context_layer = context_layer.permute(0, 2, 1, 3).contiguous()
-        new_shape = context_layer.size()[:-2] + (self.all_head_size,)
-        context_layer = context_layer.view(*new_shape)  # (B,Tq,all_head_size)
+        context_layer = context_layer.view(B, Tq, self.all_head_size)
 
-        # Final small residual gating optionally could be here (left to outer transformer block)
-
-        # Return according to flags
+        # Return outputs
         if return_attentions and (entropy_loss is not None):
             return context_layer, attn_probs, entropy_loss
         if return_attentions:
