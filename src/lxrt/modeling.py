@@ -581,9 +581,15 @@ class BertAttOutput(nn.Module):
 
 
 class BertCrossattLayer(nn.Module):
-    def __init__(self, config):
+    def __init__(self, config,Improve=False):
         super().__init__()
+        
         self.att = BertAttention(config)
+        if Improve:
+            self.att = BertAttentionImproved(config)
+        else:
+            self.att = BertAttention(config)
+
         self.output = BertAttOutput(config)
 
     def forward(self, input_tensor, ctx_tensor, ctx_att_mask=None):
@@ -593,9 +599,12 @@ class BertCrossattLayer(nn.Module):
 
 
 class BertSelfattLayer(nn.Module):
-    def __init__(self, config):
+    def __init__(self, config,Improve=False):
         super(BertSelfattLayer, self).__init__()
-        self.self = BertAttention(config)
+        if Improve:
+            self.self = BertAttentionImproved(config)
+        else:
+            self.self = BertAttention(config)
         self.output = BertAttOutput(config)
 
     def forward(self, input_tensor, attention_mask):
