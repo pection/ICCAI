@@ -1,5 +1,6 @@
 #!/bin/bash
 export HDF5_USE_FILE_LOCKING=FALSE #Disable locking b/c read only
+PYTHON=$(which python)
 
 # Run number; change to re-run the experiment
 RUN="$3"
@@ -30,11 +31,11 @@ echo ${EXP_NAME}
 echo "ho=${HO}"
 echo ${CKPT_DIR}
 echo "----------------------------------------------"
-
-export PYTHONPATH=${PYTHONPATH}:src
+echo ${PYTHONPATH}
+# export PYTHONPATH=${PYTHONPATH}:src
 
 # Run eval on minimal splits
-python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --dataset "clevr_atom_ho_exist" --optim none --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
+# python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --dataset "clevr_atom_ho_exist" --optim none --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
 
 # Run eval on complex splits
-python3 src/clevr_tasks/clevr.py --max_seq_length ${MSL} --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --optim bert --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
+python src/clevr_tasks/clevr.py --max_seq_length ${MSL} --test "val test" --load "${CKPT_DIR}/LAST" --experiment_name ${EXP_NAME} --ho_idx ${HO} --llayers 9 --xlayers 5 --rlayers 5 --batchSize 32 --optim bert --tqdm --output ${CKPT_DIR} --clevr_config "src/clevr_tasks/symlink_config.yaml"
