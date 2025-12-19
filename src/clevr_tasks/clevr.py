@@ -1066,7 +1066,7 @@ def main(
     # ---- W&B init ----
         wandb.init(
             project="ICCAI-CLEVR",
-            name=f"{args.dataset}-ho{args.ho_idx}-run{getattr(args, 'run', 0)}",
+            name=f"{args.dataset}-ho{args.ho_idx}-run{getattr(args, 'run', 0)}-DABert",
             config={
                 "dataset": args.dataset,
                 "ho_idx": args.ho_idx,
