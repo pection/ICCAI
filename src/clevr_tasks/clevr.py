@@ -1004,6 +1004,7 @@ def main(
             config={"dataset": args.dataset, "ho_idx": args.ho_idx, "mode": "eval-only"},
             mode="online",
         )
+        
         HOP_NAMES = [
             "Rubber cylinder","Rubber cyan","Large rubber","Cyan cylinder","Large cylinder","Large cyan",
             "Rubber sphere","Rubber brown","Small rubber","Brown sphere","Small sphere","Small brown",
@@ -1079,6 +1080,7 @@ def main(
             },
             mode="online",   # change to "online" if no internet for 
         )
+
         wandb.watch(clevr.model, log="all", log_freq=100)
         clevr.train(
             dm.train_dataloader(),
