@@ -581,7 +581,7 @@ class BertAttOutput(nn.Module):
 
 
 class BertCrossattLayer(nn.Module):
-    def __init__(self, config,Improve=True):
+    def __init__(self, config,Improve=False):
         super().__init__()
         
         self.att = BertAttention(config)
